@@ -6,6 +6,7 @@ const Avatar = (
     body,
     eyes,
     hair,
+    facial_hair,
     clothing1,
     clothing2,
     clothing3,
@@ -20,6 +21,7 @@ const Avatar = (
       <Part path="body" index={body} zIndex={0} />
       <Part path="eyes" index={eyes} zIndex={1} />
       <Part path="hair" index={hair} zIndex={6} />
+      <Part path="facial_hair" index={facial_hair} zIndex={6}/>
       <Part path="clothes/layer_1" index={clothing1} zIndex={2} />
       <Part path="clothes/layer_2" index={clothing2} zIndex={3} />
       <Part path="clothes/layer_3" index={clothing3} zIndex={4} />

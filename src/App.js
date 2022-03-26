@@ -7,6 +7,7 @@ const total = {
   body: 17,
   eyes: 17,
   hair: 73,
+  facial_hair: 17,
   mouth: 24,
   eyebrows: 15,
   glasses: 17,
@@ -20,6 +21,7 @@ function App() {
   const [eyes, setEyes] = useState(2);
   const [eyebrows, setEyebrow] = useState(2);
   const [hair, setHair] = useState(0);
+  const [facial_hair, setFacialHair] = useState(0);
   const [clothing1, setClothing1] = useState(0);
   const [clothing2, setClothing2] = useState(0);
   const [clothing3, setClothing3] = useState(0);
@@ -31,6 +33,7 @@ function App() {
     setEyes();
     setEyebrow();
     setHair();
+    setFacialHair();
     setMouth();
     setMouth();
     setGlasses();
@@ -44,6 +47,7 @@ function App() {
 		setEyes(Math.floor(Math.random() * total.eyes));
 		setEyebrow(Math.floor(Math.random() * total.eyebrows));
 		setHair(Math.floor(Math.random() * total.hair));
+    setFacialHair(Math.floor(Math.random() * total.facial_hair));
 		setMouth(Math.floor(Math.random() * total.mouth));
 		setMouth(Math.floor(Math.random() * total.mouth));
 		setGlasses(Math.floor(Math.random() * total.glasses));
@@ -70,6 +74,7 @@ function App() {
               body={body}
               eyes={eyes}
               hair={hair}
+              facial_hair={facial_hair}
               clothing1={clothing1}
               clothing2={clothing2}
               clothing3={clothing3}
@@ -117,6 +122,15 @@ function App() {
               path="hair"
               set={setHair}
               selected={hair}
+            />
+          </div>
+          <div className="list-section">
+            <h2>Facial Hair</h2>
+            <PartList
+              total={total.facial_hair}
+              path="facial_hair"
+              set={setFacialHair}
+              selected={facial_hair}
             />
           </div>
           <div className="list-section">
