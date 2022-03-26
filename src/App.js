@@ -54,12 +54,10 @@ function App() {
 
   useEffect(() => {
 		setToDefault();
+    randomAvatar();
 	}, []);
 
-  useEffect(() => {
-		randomAvatar();
-	}, []);
-
+  
   return (
     <div className="App">
       <div className="title">AVATAR</div>
