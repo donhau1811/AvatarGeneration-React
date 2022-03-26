@@ -1,38 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #aaff99;
+}
 .App {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 80px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: normal;
+  text-decoration: underline solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: rgb(146, 45, 45);
+  background-color: #232323;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: normal;
+  text-decoration: underline solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  background-color: rgb(247, 193, 193);
+  text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+}
+
+h2 {
+  color: rgb(165, 81, 13);
+}
+
+.divider {
+  width: 50%;
+  height: 1px;
+  border-bottom: 4px solid rgba(255, 41, 41, 0.555);
+  margin: 20px auto;
+}
+
+.avatar-group {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 100%;
+  top: calc(50% - 205px);
+  padding: 50px;
+  position: sticky;
+  background-color: rgb(28, 155, 77);
+}
+
+.avatar {
+  width: 260px;
+  height: 280px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  transform: scale(1.5);
+}
+
+.list {
+  background-color: rgba(255, 166, 0, 0.4);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  gap: 1rem;
+  padding: 20px;
+  border-radius: 10%;
+}
+
+.list-section {
+  max-width: 700px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.selected {
+  background-color: rgba(116, 116, 255, 0.315);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.clickable {
+  cursor: pointer;
+}
+
+.square {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.151);
+  transition-duration: 0.2s;
+}
+
+.square:hover {
+  background-color: rgba(255, 137, 116, 0.315);
+  transition-duration: 0.2s;
+}
+
+.img-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  margin-top: 1em;
+  color: rgb(44, 255, 190);
+  font-size: 16px;
+  line-height: 16px;
+  padding: 13px;
+  border-radius: 23px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: normal;
+  text-decoration: underline solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 110, 164) 0%,
+    rgb(35, 136, 203) 50%,
+    rgb(20, 78, 117) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid rgb(28, 110, 164);
+  cursor: pointer;
+}
+.button2 {
+  color: rgb(255, 234, 44);
+
+}
+.button:hover {
+  background: #1c6ea4;
+}
+/* .button:active {
+  background: #144e75;
+} */
+
+@media screen and (max-width: 420px) {
+  .list-section {
+    max-width: 200px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .avatar-group {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .avatar-wrapper {
+    padding: 0px;
   }
 }
