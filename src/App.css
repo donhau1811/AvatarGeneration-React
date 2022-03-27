@@ -102,6 +102,7 @@ h2 {
 
 .selected {
   background-color: rgba(116, 116, 255, 0.315);
+  transform: scale(1.5);
 }
 
 .clickable {
