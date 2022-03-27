@@ -58,7 +58,6 @@ function App() {
 
   useEffect(() => {
 		setToDefault();
-    randomAvatar();
 	}, []);
 
   
